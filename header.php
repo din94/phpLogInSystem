@@ -9,14 +9,14 @@
     <meta name="decription" content="Meta description example. Often shows up in search results">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login System</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
     <header>
-        <nav>
-            <a href="#">
-                <img src="img/login.png" alt="logo">            
+        <nav class="nav-header-main">
+            <a class="header-logo" href="index.php">
+                <img src="img/logo.png" alt="logo">            
             </a>
             <ul>
                 <li><a href="index.php">Home</a></li>
@@ -25,7 +25,7 @@
                 <li><a href="#">Contact</a></li>
             </ul>
             </nav>
-            <div>
+            <div class="header-login">
             <?php
                 if(isset($_SESSION['userId'])){
                     echo '<form action="includes/logout.inc.php" method="post">
@@ -37,7 +37,7 @@
                     <input type="password" name="pwd" placeholder="Password...">
                     <button type="submit" name="login-submit">Login</button>
                 </form>
-                <a href="signup.php">SignUp</a>';
+                <a href="signup.php" class="header-signup">SignUp</a>';
                 }
             ?>        
             </div>
